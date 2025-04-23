@@ -15,3 +15,9 @@ ai() returns a result object like:
   error?: string
 }
 ```
+
+### To use the auto-playwright Library
+
+```
+export OPENAI_API_KEY="<Your Token Here>"
+```
