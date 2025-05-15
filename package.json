@@ -11,16 +11,18 @@
     "test-debug": "npx playwright test --debug",
     "codegen": "npx playwright codegen",
     "codegen-save": "npx playwright codegen --output=test-codegen-helper.spec.ts",
-    "test-file": "npx playwright test example"
+    "test-file": "npx playwright test <example.spec.ts>",
+    "start:mcp": "npx @executeautomation/playwright-mcp-server"
   },
   "keywords": [],
   "author": "Ayush Jain",
   "license": "ISC",
   "devDependencies": {
+    "@executeautomation/playwright-mcp-server": "latest",
     "@playwright/test": "^1.51.0",
     "@types/node": "^22.13.10",
     "@zerostep/playwright": "^0.1.5",
-    "auto-playwright": "^1.16.0",
+    "concurrently": "^9.1.2",
     "typescript": "^5.8.3"
   }
 }
