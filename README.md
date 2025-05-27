@@ -73,3 +73,21 @@ The Auto-Playwright Library integrates with OpenAI to enhance test automation. T
 - [Playwright Documentation](https://playwright.dev/)
 - [ZeroStep-AI Documentation](https://zerostep.ai/)
 - [OpenAI Documentation](https://platform.openai.com/docs/)
+
+
+## CSS Selectors
+1. If Id is present
+css -> tagname#id (or) #id
+
+2. If class attribute is present
+css -> tagname.class (or) .class
+
+3. Write css based on any Attribute
+css -> [attribute='value']
+
+4. Write Css with traversing from Parent to child
+css -> parenttagname >> childtagname
+
+5. If needs to write the locator based on text
+text=''
+

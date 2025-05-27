@@ -1,0 +1,39 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      rampTo: 10
+      name: "Warm up"
+    - duration: 60
+      arrivalRate: 10
+      name: "Steady load"
+    - duration: 60
+      arrivalRate: 5
+      name: "Cool down"
+  http:
+    pool:
+      maxSockets: 100
+      maxFreeSockets: 10
+      timeout: 60000
+      freeSocketTimeout: 30000
+  http: 
+    request:
+      timeout: 10000
+      maxRedirects: 5
+      maxRetries: 3
+      retryDelay: 1000
+      retryOnStatus: [500, 502, 503, 504]
+scenarios:  
+  - flow:
+      - get:
+          url: "/"
+          capture:
+            - json: "$.data.id"
+              as: "userId"
+      - post:
+          url: "/api/users/{{ userId }}"
+          json:
+            name: "John Doe"
+            email: "userId" 
+            

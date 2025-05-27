@@ -1,0 +1,7 @@
+{
+    "yaml.schemas": {
+        "https://www.artillery.io/schema.json": [
+            "file:///Users/ayushjain/SelfLearning/playwright_test_automation/artillery-learning/first-test.yml"
+        ]
+    }
+}

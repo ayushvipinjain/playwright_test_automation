@@ -12,7 +12,8 @@
     "codegen": "npx playwright codegen",
     "codegen-save": "npx playwright codegen --output=test-codegen-helper.spec.ts",
     "test-file": "npx playwright test <example.spec.ts>",
-    "start:mcp": "npx @executeautomation/playwright-mcp-server"
+    "start:mcp": "npx @executeautomation/playwright-mcp-server",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "Ayush Jain",

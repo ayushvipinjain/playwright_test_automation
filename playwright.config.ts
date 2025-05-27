@@ -33,7 +33,10 @@ export default defineConfig({
     video: 'on',
     screenshot: 'on'
   },
-
+  expect: {
+    timeout: 5000 // Maximum time expect() should wait for the condition to be met. Defaults to 5 seconds.
+  },
+  timeout: 60000, // Maximum time each test can run. Defaults to 30 seconds.
   /* Configure projects for major browsers */
   projects: [
     {
